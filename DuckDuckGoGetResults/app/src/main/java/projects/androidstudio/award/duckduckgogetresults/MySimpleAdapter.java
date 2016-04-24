@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import android.content.Context;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -73,11 +74,12 @@ public class MySimpleAdapter extends SimpleAdapter {
         holder.firstUrl = (TextView) convertView.findViewById(R.id.firstUrlView);
         holder.text = (TextView) convertView.findViewById(R.id.textView);
         holder.name = (TextView) convertView.findViewById(R.id.nameView);
-
         if(data.get("Name") != null)
             holder.name.setText(data.get("Name").toString());
-        if (data.get("Result") != null)
+        if (data.get("Result") != null) {
             holder.result.setText(Html.fromHtml(data.get("Result").toString()));
+            holder.result.setMovementMethod(LinkMovementMethod.getInstance());
+        }
         if (data.get("URL") != null)
             holder.url.setText(data.get("URL").toString());
         if (data.get("Height") != null)
