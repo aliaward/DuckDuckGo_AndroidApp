@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DuckDuckGoGetResults</string>
+    <string name="header">Enter in a search for the Duck Duck Go Search Engine</string>
+    <string name="search_msg">Type search here</string>
+    <string name="button_submit">Submit</string>
+    <string name="searchImage">SearchResultImage</string>
+    <string name="duckImage">DuckDuckGo Search Engine Logo</string>
+</resources>
